@@ -12,3 +12,5 @@ You can think container as tiny VM.
 - ( Thick of it like dual booting )
 
 If you run a program inside a container then yor main os doesn't care about it. The program runs separate from our os.
+
+![container]( images/conatainer.png "container")
