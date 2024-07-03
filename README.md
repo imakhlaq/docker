@@ -12,7 +12,7 @@ You can think container as tiny VM.
 - Its has separate os from your os.
 - ( Think of it like dual booting. And running container on separate os i.e. VM )
 
-If you run a program inside a container then yor main os doesn't care about it. The program runs separate from our os.
+If you run a program inside a container then your main os doesn't care about it. The program runs separate from our os.
 
 ![container]( images/conatainer.png "container")
 Note: Container port =! your machine port. You have to map the container port to your machine port. In order to access
@@ -30,6 +30,19 @@ Image contain every dependency that the application need to run.
 
 ## Common Docker Commands
 
+### Docker Run
+
 ```
 docker run <imageName>
 ```
+
+- To run the image on your machine.
+- eg => docker run mongo
+- It will start the container, but you have added the port mapping.
+
+```
+docker run -p 27017:27017 <imageName>
+```
+
+- You're machine 27017 port will be mapped to the container 27017 port number.
+- So every request you will receive on 27017 port on your machine will be forwarded to the container 27017 port.
