@@ -8,9 +8,15 @@ You can think container as tiny VM.
 
 - It has its own file system.
 - It has its network.
+- It has it own set of ports.
 - Its has separate os from your os.
 - ( Think of it like dual booting. And running container on separate os i.e. VM )
 
 If you run a program inside a container then yor main os doesn't care about it. The program runs separate from our os.
 
 ![container]( images/conatainer.png "container")
+Note: Container port =! your machine port. You have to map the container port to your machine port. In order to access
+the application running inside container.
+
+example: If your mapping your container port to the machine port. You're essential saying that if any request comes to
+the port 4000 on my machine forward it to the container 5949 port number.
