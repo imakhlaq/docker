@@ -30,7 +30,7 @@ Image contain every dependency that the application need to run.
 
 ## Common Docker Commands
 
-### Docker Run
+### Running containers
 
 ```
 docker run <imageName>
@@ -44,5 +44,35 @@ docker run <imageName>
 docker run -p 37015:27017 <imageName>
 ```
 
-- You're machine 37015 port will be mapped to the container 27017 port number.
+- -p 37015:27017 flag maps your machine 37015 port to the container 27017 port number.
 - So every request you will receive on 37015 port on your machine will be forwarded to the container 27017 port.
+
+```
+docker run -d -p 37015:27017 <imageName>
+```
+
+- -d flag stands for de-attach mode.
+- Means run the image in background and free up the terminal.
+
+```
+docker run -e POSTGRES_PASSWORD=mypass -e POSTGRES_USERNAME=root -d -p 37015:27017 <imageName>
+```
+
+- -e flag stands for environment variables.
+- You can provide environment variables to a container.
+
+### Inspecting container
+
+```
+docker ps
+```
+
+- This command list all the running images on the machine.
+
+### Stopping container
+
+```
+docker kill <containerID>
+```
+
+- This command kill the container.
