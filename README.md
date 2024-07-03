@@ -20,3 +20,16 @@ the application running inside container.
 
 example: If your mapping your container port to the machine port. You're essential saying that if any request comes to
 the port 4000 on my machine forward it to the container 5949 port number.
+
+## Image
+
+When you build a dockerized application you get an image that can be run. And an image in running is called container.
+Image contain every dependency that the application need to run.
+
+![image]( images/image.png "image")
+
+## Common Docker Commands
+
+```
+docker run <imageName>
+```
